@@ -8,16 +8,16 @@
 
 > web design usin css js
 
-### 🏠 [Homepage](index.html)
+### 🏠 [Homepage](https://op10y.github.io/profile-card)
 
-### ✨ [Demo](op10y.github.io/optyx.com)
+### ✨ [Demo](https://op10y.github.io/profile-card)
 
 ## Author
 
 👤 **Abid aka Opty**
 
 * Website: wwww.optyx.ml
-* Github: [@op10y](https://github.com/op10y)
+* Github: [@op10y](https://github.com/profile-card)
 
 ## Show your support
 
