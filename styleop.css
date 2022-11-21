@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 /* ................profile card............... */
 
 body {
@@ -1183,4 +1183,120 @@ nav a.open + nav {
 .hover\:text-white:hover {
   var--tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* contact form */
+
+#signUpForm * {
+  box-sizing: border-box;
+}
+#signUpForm {
+  display: inline-block;
+  background: #7700ff52;
+  padding: 30px 30px 0;
+  width: 300px;
+  font-size: 18px;
+  position: fixed;
+  border: 2px solid rgb(0, 255, 0);
+  bottom: -450px;
+  right: 30px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 12px 12px 0 0;
+  font-family: "Indie Flower", cursive;
+  backdrop-filter: blur(15px);
+}
+
+#signUpForm .contact-button {
+  background: #3b0e35b0;
+  border: 2px solid rgb(255, 222, 36);
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 12px;
+  color: #ff6600;
+  position: relative;
+  margin: -54px auto 30px;
+  display: table;
+  font-weight: bold;
+  transition: 0.1s ease-in-out;
+}
+#signUpForm .contact-button:hover {
+  background: #707070;
+  color: #4aff43;
+  cursor: pointer;
+  transform: translateY(-1.9px);
+}
+#signUpForm form {
+  width: 100%;
+}
+#signUpForm input,
+#signUpForm textarea {
+  width: 100%;
+  margin: 4px 0;
+  padding: 10px;
+  border-radius: 12px;
+
+  border: 1px solid rgb(255, 72, 72);
+  text-align: center;
+  background: #0000006c;
+  backdrop-filter: blur(50px);
+  font-size: 0.85em;
+  font-weight: bold;
+}
+.form-arrow {
+  font-size: 0.7em;
+  position: relative;
+  display: inline-block;
+  transform-origin: center;
+  vertical-align: middle;
+  top: -2px;
+  left: 10px;
+}
+#signUpForm input:focus,
+#signUpForm textarea:focus {
+  border: 1px solid #789400;
+  outline: none;
+}
+#signUpForm textarea {
+  height: 100px;
+}
+#signUpForm .wpcf7-submit {
+  background: #585a10;
+  font-weight: bolder;
+  color: #ff5e00;
+  box-shadow: 0px 6px 30px rgba(158, 13, 13, 0.31);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+}
+#signUpForm .wpcf7-submit:hover {
+  background: #ff000d3d;
+  color: #09ff00;
+  cursor: pointer;
+  transform: translateY(-1.9px);
+}
+@media only screen and (max-width: 768px) {
+  #signUpForm {
+    padding: 10px 20px 0;
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    display: table;
+    right: -277px;
+    top: 30%;
+    border-radius: 12px 12px 0;
+    box-shadow: none;
+    transform: scale(0.8);
+    transform-origin: right;
+  }
+  #signUpForm .contact-button {
+    position: absolute;
+    left: -15px;
+    top: 80px;
+    border-radius: 12px;
+    bottom: 0;
+    border: 5px solid white;
+    margin: auto 0;
+    transform-origin: left;
+    transform: rotateZ(-90deg);
+  }
 }

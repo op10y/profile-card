@@ -1,0 +1,325 @@
+/* hover css background ...............................starts here......................... */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+.center {
+  min-height: 100vh;
+  background: linear-gradient(60deg, #424242 0%, #003441 100%);
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animate 20s linear infinite;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  animation: animate 4s linear infinite;
+  z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+}
+.row {
+  display: inline-flex;
+  margin-top: -32px;
+  margin-left: -50px;
+}
+
+.row:nth-child(even) {
+  margin-left: 1px;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 110px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin: 2px;
+  background-color: #111;
+  transition: 2s;
+  animation: transform 0.91s ease-in-out infinite;
+  transform: rotate(30deg);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+@keyframes transform {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hexagon:hover {
+  transition: 0s;
+  background-color: #0f0;
+  transform: rotate(30deg);
+}
+
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  background: rgba(0, 1, 2, 0.247);
+  z-index: 2;
+  animation: transform 0.9s ease-in-out infinite;
+}
+@keyframes transform {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  background: rgb(29, 20, 20);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: 1;
+  animation: transform 0.2s ease-in-out infinite;
+}
+@keyframes transform {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* ends */
+
+/* snake game css ...............................starts here......................... */
+
+.body {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+#scoreBox {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 15px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  font-family: "Nunito", sans-serif;
+  z-index: 50;
+  transform: translateZ(50px);
+}
+
+#hiscoreBox {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: "Nunito", sans-serif;
+  z-index: 50;
+  transform: translateZ(50px);
+}
+
+#board {
+  background: linear-gradient(rgb(0, 43, 0), rgb(30, 5, 51));
+  width: 80vmin;
+  height: 82vmin;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+  z-index: -11;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: translateZ(20px);
+}
+#board::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid rgb(255, 166, 0);
+  border-radius: 10px;
+  z-index: -112;
+  filter: blur(5px);
+  animation: filter 3s ease-in-out infinite;
+}
+@keyframes filter {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.head {
+  background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+  border: 2px solid rgb(34, 4, 34);
+  transform: scale(1.02);
+  border-radius: 9px;
+}
+
+.snake {
+  background-color: purple;
+  border: 0.25vmin solid white;
+  border-radius: 12px;
+}
+
+.food {
+  background: linear-gradient(red, purple);
+  border: 0.25vmin solid black;
+  border-radius: 8px;
+}
+
+/* ...............................ends here......................... */
+.info {
+  position: absolute;
+  top: 20px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: left;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 3000px) {
+  .info {
+    top: 10px;
+    left: 10px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: large;
+  color: rgb(0, 255, 255);
+  text-shadow: rgba(0, 255, 255, 0.411);
+}
+h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  color: rgb(255, 196, 0);
+  text-shadow: rgba(0, 255, 255, 0.411);
+}
+.info2 {
+  position: absolute;
+  bottom: 20px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: left;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 3000px) {
+  .info2 {
+    bottom: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: large;
+    color: rgb(0, 255, 106);
+    text-shadow: rgba(0, 255, 255, 0.411);
+  }
+  p {
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    color: rgb(255, 166, 0);
+    text-shadow: rgba(0, 255, 255, 0.411);
+  }
+}
+ul {
+  font-family: poppins, sans-serif;
+  font-size: 10px;
+  color: rgb(228, 122, 255);
+}
+@media screen and (max-width: 500px) {
+  .info2,
+  .info {
+    justify-content: center;
+    align-items: center;
+  }
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  text-shadow: rgba(0, 255, 255, 0.411);
+  align-items: flex-start;
+}
