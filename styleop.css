@@ -10,6 +10,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  perspective: 1000px;
 }
 body::before {
   content: "";
@@ -115,8 +116,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  transform-style: preserve-3d;
-  perspective: 500px;
+  transform: translateZ(40px);
 }
 .profile-card__desc h1 {
   font-size: 2rem;
@@ -131,12 +131,11 @@ body::before {
   display: flex;
   justify-content: center;
   gap: 10px;
-  transform: translateZ(20px);
+  transform: translateZ(45px);
 }
 @media screen and (max-width: 1000px) {
   .profile-card__info {
     gap: 10px;
-    transform: translateZ(20px);
   }
 }
 .profile-card__info > div {
@@ -144,27 +143,26 @@ body::before {
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
-  transform: translateZ(20px);
+  transform: translateZ(45px);
 }
 .profile-card__info > div > *:first-child {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 1rem;
   margin-bottom: 10px;
-  transform: translateZ(20px);
+  transform: translateZ(45px);
 }
 .profile-card__info > div > *:last-child {
   font-size: 10px;
   opacity: 0.7;
-  transform: translateZ(20px);
+  transform: translateZ(45px);
 }
 .profile-card__social {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  transform-style: preserve-3d;
-  perspective: 1000px;
+  transform: translateZ(40px);
 }
 .profile-card__social a {
   display: inline-flex;
@@ -178,7 +176,7 @@ body::before {
   position: relative;
   flex-shrink: 0;
   transition: all 0.2s;
-  transform: translateZ(30px);
+  transform: translateZ(40px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__social a {
