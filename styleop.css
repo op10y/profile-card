@@ -60,14 +60,12 @@ body::before {
   border-radius: 50px;
   width: 420px;
   position: relative;
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
   border: 2px solid rgba(0, 238, 255, 0.251);
   padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: rgba(43, 0, 78, 0.342);
+  background-color: rgba(43, 0, 78, 0.6);
   background-blend-mode: overlay;
   transform-style: preserve-3d;
   perspective: 1000px;
