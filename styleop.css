@@ -72,18 +72,6 @@ body::before {
   transform-style: preserve-3d;
   perspective: 1000px;
 }
-.profile-card::before {
-  content: "";
-  border-radius: 50px;
-  width: 450px;
-  border: 2px solid rgba(240, 79, 0, 0.7);
-  padding: 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: transparent;
-  transform: translateY(60px);
-}
 @media screen and (max-width: 1080px) {
   .profile-card {
     width: auto;
@@ -103,8 +91,10 @@ body::before {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  border: 3px solid rgba(240, 79, 0, 0.7);
   object-fit: cover;
   display: block;
+  z-index: 2;
   box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
   transform: translateZ(40px);
 }
@@ -142,11 +132,12 @@ body::before {
   display: flex;
   justify-content: center;
   gap: 10px;
-  transform: translateZ(45px);
+  transform: translateZ(50px);
 }
 @media screen and (max-width: 1000px) {
   .profile-card__info {
     gap: 10px;
+    transform: translateZ(50px);
   }
 }
 .profile-card__info > div {
@@ -166,7 +157,7 @@ body::before {
 .profile-card__info > div > *:last-child {
   font-size: 10px;
   opacity: 0.7;
-  transform: translateZ(45px);
+  transform: translateZ(30px);
 }
 .profile-card__social {
   display: flex;
@@ -234,11 +225,13 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  transform: translateZ(30px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__actions {
     flex-direction: column;
     gap: 1.5rem;
+    transform: translateZ(30px);
   }
 }
 .profile-card__actions > button {
@@ -251,10 +244,12 @@ body::before {
   --colors-secondary--500: #00f7ff;
   cursor: pointer;
   transition: all 0.2s;
+  transform: translateZ(20px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__actions > button {
     min-width: 170px;
+    transform: translateZ(20px);
   }
 }
 @media screen and (max-width: 2000px) {
@@ -262,6 +257,7 @@ body::before {
     min-width: inherit;
     width: 100%;
     max-width: 350px;
+    transform: translateZ(20px);
   }
 }
 @media screen and (min-width: 100px) {
@@ -269,6 +265,7 @@ body::before {
     transform: translateY(-5px);
     transform: rotate3d(1, 0, 0, 360deg);
     transition: 0.2s ease;
+    transform: translateZ(20px);
   }
 }
 
