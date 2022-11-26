@@ -92,7 +92,7 @@ body::before {
   border: 3px solid rgba(240, 79, 0, 0.7);
   object-fit: cover;
   display: block;
-  z-index: 2;
+  z-index: 10;
   box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
   transform: translateZ(40px);
 }
@@ -115,7 +115,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  transform: translateZ(40px);
+  transform: translateZ(30px);
 }
 .profile-card__desc h1 {
   font-size: 2rem;
@@ -130,12 +130,12 @@ body::before {
   display: flex;
   justify-content: center;
   gap: 10px;
-  transform: translateZ(50px);
+  transform: translateZ(30px);
 }
 @media screen and (max-width: 1000px) {
   .profile-card__info {
     gap: 10px;
-    transform: translateZ(50px);
+    transform: translateZ(30px);
   }
 }
 .profile-card__info > div {
@@ -143,14 +143,14 @@ body::before {
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
-  transform: translateZ(45px);
+  transform: translateZ(30px);
 }
 .profile-card__info > div > *:first-child {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 1rem;
   margin-bottom: 10px;
-  transform: translateZ(45px);
+  transform: translateZ(30px);
 }
 .profile-card__info > div > *:last-child {
   font-size: 10px;
@@ -162,7 +162,7 @@ body::before {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  transform: translateZ(40px);
+  transform: translateZ(30px);
 }
 .profile-card__social a {
   display: inline-flex;
@@ -176,7 +176,7 @@ body::before {
   position: relative;
   flex-shrink: 0;
   transition: all 0.2s;
-  transform: translateZ(40px);
+  transform: translateZ(30px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__social a {
@@ -281,7 +281,7 @@ body::before {
   box-shadow: 0 4px 30px rgba(223, 45, 70, 0.35);
 }
 .profile-card__actions > button.orange2:hover {
-  box-shadow: 0 7px 30px rgba(223, 45, 70, 0.75);
+  box-shadow: 0 7px 30px rgba(223, 45, 70, 0.8);
 }
 .profile-card__actions > button.orange2 .active {
   background: linear-gradient(45deg, #33d513, #5024f0);
