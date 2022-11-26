@@ -73,9 +73,10 @@ body::before {
   perspective: 1000px;
 }
 .profile-card::after {
+  content: "";
   border-radius: 50px;
   width: 450px;
-  position: relative;
+  position: absolute;
   border: 2px solid rgba(0, 238, 255, 0.251);
   padding: 1rem 1rem;
   display: flex;
