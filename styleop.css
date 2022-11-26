@@ -72,18 +72,17 @@ body::before {
   transform-style: preserve-3d;
   perspective: 1000px;
 }
-.profile-card::after {
+.profile-card::before {
   content: "";
   border-radius: 50px;
   width: 450px;
-  position: absolute;
-  border: 2px solid rgba(0, 238, 255, 0.251);
+  border: 2px solid rgba(240, 79, 0, 0.7);
   padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 20px;
   background: transparent;
-  transform: translateY(50px);
+  transform: translateY(60px);
 }
 @media screen and (max-width: 1080px) {
   .profile-card {
