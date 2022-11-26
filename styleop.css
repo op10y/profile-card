@@ -91,7 +91,6 @@ body::before {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  -o-object-fit: cover;
   object-fit: cover;
   display: block;
   box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
@@ -121,11 +120,11 @@ body::before {
 .profile-card__desc h1 {
   font-size: 2rem;
   font-weight: bold;
-  transform: translateZ(40px);
+  transform: translateZ(50px);
 }
 .profile-card__desc h1 + div {
   font-size: 15px;
-  transform: translateZ(20px);
+  transform: translateZ(40px);
 }
 .profile-card__info {
   display: flex;
