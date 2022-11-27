@@ -984,7 +984,7 @@ video {
   border-bottom-left-radius: 120px;
   border-top-right-radius: 120px;
   overflow: hidden;
-  background: url(/files/33.gif) no-repeat center;
+  background-color: #100516f2;
 }
 @media screen and (max-height: 650px) {
   .menu {
