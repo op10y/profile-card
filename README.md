@@ -16,10 +16,9 @@
 
 👤 **Abid aka Opty**
 
-* Website: wwww.optyx.ml
+* Website: [www.abidhussaindar.com](https://optyx.ml)
 * Github: [@op10y](https://github.com/profile-card)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
