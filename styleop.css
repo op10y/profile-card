@@ -10,8 +10,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  perspective: 1000px;
-  transform-style: preserve-3d;
 }
 body::before {
   content: "";
@@ -66,10 +64,11 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: rgba(43, 0, 78, 0.6);
+  background-color: rgba(43, 0, 78, 0.7);
   background-blend-mode: overlay;
   transform-style: preserve-3d;
   perspective: 1000px;
+ 
 }
 @media screen and (max-width: 1080px) {
   .profile-card {
@@ -85,27 +84,38 @@ body::before {
     perspective: 1000px;
   }
 }
-.profile-card__img img {
+.logo {
+      display: block;
+    width: 135px;
+    height: 135px;
+    top: 2px;
+    border: none;
+    right: 4px;
+    position: absolute;
+    transform: translateZ(90px);
+}
+
+img {
   margin: auto;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 3px solid rgba(240, 79, 0, 0.7);
+  border-bottom: 4px solid rgb(0, 240, 72);
   object-fit: cover;
   display: block;
-  z-index: 10;
+  z-index: 2;
   box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
   transform: translateZ(40px);
 }
 @media screen and (max-width: 1080px) {
-  .profile-card__img img {
+  img {
     width: auto;
     transform: translateZ(40px);
   }
 }
 
 @media screen and (max-height: 1920px) {
-  .profile-card__img img {
+  img {
     height: auto;
     transform: translateZ(40px);
   }
@@ -116,12 +126,13 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  transform: translateZ(30px);
+  transform-style: preserve-3d;
+  transform: translateZ(10px);
 }
 .profile-card__desc h1 {
   font-size: 2rem;
   font-weight: bold;
-  transform: translateZ(50px);
+  transform: translateZ(80px);
 }
 .profile-card__desc h1 + div {
   font-size: 15px;
@@ -131,7 +142,7 @@ body::before {
   display: flex;
   justify-content: center;
   gap: 10px;
-  transform: translateZ(30px);
+  transform: translateZ(20px);
 }
 @media screen and (max-width: 1000px) {
   .profile-card__info {
@@ -144,14 +155,14 @@ body::before {
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
-  transform: translateZ(30px);
+  transform: translateZ(35px);
 }
 .profile-card__info > div > *:first-child {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 1rem;
   margin-bottom: 10px;
-  transform: translateZ(30px);
+  transform: translateZ(35px);
 }
 .profile-card__info > div > *:last-child {
   font-size: 10px;
@@ -163,7 +174,7 @@ body::before {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  transform: translateZ(30px);
+  transform: translateZ(50px);
 }
 .profile-card__social a {
   display: inline-flex;
@@ -177,13 +188,15 @@ body::before {
   position: relative;
   flex-shrink: 0;
   transition: all 0.2s;
-  transform: translateZ(30px);
+  transform-style: preserve-3d;
+  transform: translateZ(40px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__social a {
     width: 40px;
     height: 40px;
     margin: 5px;
+    transform-style: preserve-3d;
   }
 }
 @media screen and (min-width: 100px) {
@@ -224,13 +237,14 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  transform: translateZ(30px);
+  transform-style: preserve-3d;
+  transform: translateZ(40px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__actions {
     flex-direction: column;
     gap: 1.5rem;
-    transform: translateZ(30px);
+    transform: translateZ(40px);
   }
 }
 .profile-card__actions > button {
@@ -243,12 +257,10 @@ body::before {
   --colors-secondary--500: #00f7ff;
   cursor: pointer;
   transition: all 0.2s;
-  transform: translateZ(30px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__actions > button {
     min-width: 170px;
-    transform: translateZ(30px);
   }
 }
 @media screen and (max-width: 2000px) {
@@ -256,7 +268,6 @@ body::before {
     min-width: inherit;
     width: 100%;
     max-width: 350px;
-    transform: translateZ(30px);
   }
 }
 @media screen and (min-width: 100px) {
@@ -264,7 +275,6 @@ body::before {
     transform: translateY(-5px);
     transform: rotate3d(1, 0, 0, 360deg);
     transition: 0.2s ease;
-    transform: translateZ(30px);
   }
 }
 
@@ -282,12 +292,13 @@ body::before {
   box-shadow: 0 4px 30px rgba(223, 45, 70, 0.35);
 }
 .profile-card__actions > button.orange2:hover {
-  box-shadow: 0 7px 30px rgba(223, 45, 70, 0.8);
+  box-shadow: 0 7px 30px rgba(223, 45, 70, 0.75);
 }
 .profile-card__actions > button.orange2 .active {
   background: linear-gradient(45deg, #33d513, #5024f0);
   box-shadow: 0 4px 30px rgba(255, 174, 0, 0.384);
-  transform: translateZ(50px);
+  transform: translateZ(10px);
+  transform: scale(1.2) translateY(-5px);
 }
 /*
 ! tailwindcss v3.2.2 | MIT License | https://tailwindcss.com
@@ -471,8 +482,7 @@ table {
 /*
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
+3. Remove default padding in all browsers
 
 button,
 input,
