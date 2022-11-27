@@ -978,8 +978,6 @@ video {
 
 .menu {
   height: auto !important;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   border: 2px solid rgb(255, 174, 0);
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
