@@ -64,7 +64,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: rgba(43, 0, 78, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -85,14 +85,14 @@ body::before {
   }
 }
 .logo {
-      display: block;
-    width: 135px;
-    height: 135px;
-    top: 2px;
-    border: none;
-    right: 4px;
-    position: absolute;
-    transform: translateZ(90px);
+display: block;
+width: 135px;
+height: 135px;
+top: 237px;
+border: none;
+left: 145px;
+position: absolute;
+transform: translateZ(-33px);
 }
 
 img {
@@ -100,7 +100,7 @@ img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border-bottom: 4px solid rgb(0, 240, 72);
+  /* border-bottom: 4px solid rgb(0, 240, 72); */
   object-fit: cover;
   display: block;
   z-index: 2;
