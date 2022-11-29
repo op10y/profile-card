@@ -6,45 +6,8 @@
   height: 400px;
   background-color: transparent;
   position: absolute;
-  top: -16%;
-  transform: translate(-50%, -50%);
   transform: translateZ(40px);
-  animation: transformAnimate 2s linear infinite;
-  -webkit-animation: transformAnimate 5s linear infinite;
-}
-@-webkit-keyframes transformAnimate {
-  0% {
-    transform: translateZ(40px);
-  }
-  25% {
-    transform: translateZ(10px);
-  }
-  50% {
-    transform: translateZ(70px);
-  }
-  60% {
-    transform: translateZ(0px);
-  }
-  100% {
-    transform: translateZ(40px);
-  }
-}
-@keyframes transformAnimate {
-  0% {
-    transform: translateZ(40px);
-  }
-  25% {
-    transform: translateZ(10px);
-  }
-  50% {
-    transform: translateZ(70px);
-  }
-  60% {
-    transform: translateZ(0px);
-  }
-  100% {
-    transform: translateZ(40px);
-  }
+  top: -7rem;
 }
 /*******************************
 *******************************/
