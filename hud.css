@@ -6,8 +6,8 @@
   height: 400px;
   background-color: transparent;
   position: absolute;
+  padding: 1em;
   transform: translateZ(40px);
-  top: -7rem;
 }
 /*******************************
 *******************************/
@@ -18,8 +18,8 @@
   display: none;
 }
 .trans-lines-holder {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   position: absolute;
 }
 

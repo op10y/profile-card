@@ -57,9 +57,9 @@ body::before {
 .profile-card {
   box-shadow: 15 1px 20px 210px rgb(0, 0, 0);
   border-radius: 50px;
-  width: 420px;
+  width: 320px;
   position: relative;
-  border: 2px solid rgba(0, 238, 255, 0.251);
+  border: 2px solid rgb(255, 145, 0);
   padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -84,43 +84,65 @@ body::before {
     perspective: 1000px;
   }
 }
-.logo {
-display: block;
-width: 135px;
-height: 135px;
-top: 237px;
-border: none;
-left: 145px;
-position: absolute;
-transform: translateZ(-33px);
+.backavatar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateZ(-200px);
+  opacity: 0.5;
 }
 
-img {
-  margin: auto;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+
+.avatar {
   /* border-bottom: 4px solid rgb(0, 240, 72); */
-  object-fit: cover;
-  display: block;
-  z-index: 2;
-  box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
-  transform: translateZ(40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(50px);
+  box-shadow: 15 1px 20px 210px rgb(0, 0, 0);
 }
-@media screen and (max-width: 1080px) {
-  img {
-    width: auto;
-    transform: translateZ(40px);
+
+.avatar img{
+  max-width: 200px;
+  border-radius: 100%;
+  animation: rotateAnimation 10s  ease infinite;
+}
+@-webkit-keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  20%
+  {
+    transform: rotate(5deg);
+  }
+  40%
+  {
+    transform: rotate(-5deg);
+  }
+  50%
+  {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  85% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
-@media screen and (max-height: 1920px) {
-  img {
-    height: auto;
-    transform: translateZ(40px);
-  }
+.backavatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  transform: translateZ(-50px);
+  z-index: 3;
 }
-
 .profile-card__desc {
   text-align: center;
   display: flex;
@@ -208,7 +230,7 @@ img {
   background: linear-gradient(45deg, #527ad1, #094579, #108dfa);
   box-shadow: 0 4px 30px rgba(43, 98, 169, 0.5);
 }
-.profile-card__social a.twitter {
+.profile-card__social a.linkedin {
   background: linear-gradient(45deg, #1da1f2, #0078d7);
   box-shadow: 0 4px 30px rgba(19, 127, 212, 0.7);
 }
@@ -251,7 +273,7 @@ img {
   font-weight: bold;
   font-size: 15px;
   padding: 10px 0;
-  min-width: 250px;
+  min-width: 150px;
   border-radius: 50px;
   text-align: center;
   --colors-secondary--500: #00f7ff;
@@ -260,20 +282,20 @@ img {
 }
 @media screen and (max-width: 2000px) {
   .profile-card__actions > button {
-    min-width: 170px;
+    min-width: 100px;
   }
 }
 @media screen and (max-width: 2000px) {
   .profile-card__actions > button {
     min-width: inherit;
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
   }
 }
 @media screen and (min-width: 100px) {
   .profile-card__actions > button:hover {
     transform: translateY(-5px);
-    transform: rotate3d(1, 0, 0, 360deg);
+    transform: translateZ(10px);
     transition: 0.2s ease;
   }
 }
@@ -297,7 +319,7 @@ img {
 .profile-card__actions > button.orange2 .active {
   background: linear-gradient(45deg, #33d513, #5024f0);
   box-shadow: 0 4px 30px rgba(255, 174, 0, 0.384);
-  transform: translateZ(10px);
+  transform: translateZ(-15px);
   transform: scale(1.2) translateY(-5px);
 }
 /*
