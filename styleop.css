@@ -258,23 +258,24 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  
   transform-style: preserve-3d;
   transform: translateZ(40px);
 }
 @media screen and (max-width: 2000px) {
   .profile-card__actions {
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    
     transform: translateZ(40px);
   }
 }
 .profile-card__actions > button {
   font-weight: bold;
   font-size: 15px;
+  text-decoration-color: white;
   padding: 10px 0;
   min-width: 150px;
-  border-radius: 50px;
+  
   text-align: center;
   --colors-secondary--500: #00f7ff;
   cursor: pointer;
@@ -300,18 +301,22 @@ body::before {
   }
 }
 
-/*
+
 .profile-card__actions > button.blue1 {
-  background: linear-gradient(-45deg, #1da1f2, #0e71c8);
-  box-shadow: 0 4px 30px rgba(19, 127, 212, 0.4);
+  background: linear-gradient(-45deg, #1df288, #87c80e);
+  box-shadow: 0 4px 30px rgba(19, 212, 45, 0.4);
+  border-radius: 50px;
+  border-bottom-right-radius: 1rem;
 }
 .profile-card__actions > button.blue1:hover {
-  box-shadow: 0 7px 30px rgba(19, 127, 212, 0.75);
-}*/
+  box-shadow: 0 7px 30px rgba(19, 212, 19, 0.75);
+}
 
 .profile-card__actions > button.orange2 {
   background: linear-gradient(45deg, #d5135a, #f05924);
   box-shadow: 0 4px 30px rgba(223, 45, 70, 0.35);
+  border-radius: 50px;
+  border-bottom-left-radius: 1rem;
 }
 .profile-card__actions > button.orange2:hover {
   box-shadow: 0 7px 30px rgba(223, 45, 70, 0.75);
