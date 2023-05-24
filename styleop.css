@@ -66,6 +66,7 @@ body::before {
   gap: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 1000px;
  
@@ -981,6 +982,7 @@ video {
   font-family: nunito, poppins, sans-serif;
   font-size: 0.2rem !important;
   transition: all 1s ease;
+  z-index: 1000px;
 }
 .mn__img img {
   margin: auto;
@@ -1014,6 +1016,7 @@ video {
 
 .menu.active {
   transform: translateX(300px);
+  -webkit-transform: translateX(300px);
   transition: 0.4s;
 }
 .top {
