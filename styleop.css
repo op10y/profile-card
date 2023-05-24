@@ -89,7 +89,7 @@ body::before {
   justify-content: center;
   align-items: center;
   position: absolute;
-  transform: translateZ(-200px);
+  -webkit-transform: translateZ(-200px);
   opacity: 0.5;
 }
 
@@ -99,7 +99,7 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateZ(50px);
+  -webkit-transform: translateZ(50px);
   box-shadow: 15 1px 20px 210px rgb(0, 0, 0);
 }
 
@@ -140,7 +140,7 @@ body::before {
   justify-content: center;
   align-items: center;
   margin: 1em;
-  transform: translateZ(-50px);
+  -webkit-transform: translateZ(-50px);
   z-index: 3;
 }
 .profile-card__desc {
