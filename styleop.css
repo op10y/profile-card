@@ -20,7 +20,6 @@ body::before {
   background: url("files/cbpnk.webp") no-repeat center;
   background-size: cover;
   width: 100%;
-  -webkit-transform: translateZ(-100px);
   -webkit-animation: backgroundZoomAnimate 20s forwards;
   animation: backgroundZoomAnimate 20s forwards;
   animation: zoom-in-zoom-out 20s ease-in-out infinite;
@@ -69,6 +68,7 @@ body::before {
   background-blend-mode: overlay;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transform: translateZ(-100px);
   perspective: 1000px;
  
 }
