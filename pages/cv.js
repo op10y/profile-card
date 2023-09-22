@@ -18,4 +18,3 @@ function demo(){
 }
 if (document.location.pathname.indexOf('fullcpgrid')>-1){
   demo();
-} 
