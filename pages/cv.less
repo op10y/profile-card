@@ -76,3 +76,32 @@ body.night {
   width: 40px;
   height: 24px;
   /*border-radius*/
+  -webkit-border-radius: @togglebutton-size;
+    -moz-border-radius: @togglebutton-size;
+    border-radius: @togglebutton-size;
+    background: @off-bg;
+    vertical-align: middle;
+    margin: 0 @togglebutton-margin;
+    border: @on-border;
+}
+.toggle-box input[type=checkbox]:checked + .toggle-box-label-left:before{
+    right: 17px;
+    box-shadow: 5px 5px 0 0 @off-dot-color;
+    background: transparent;
+}
+.toggle-box input[type=checkbox]:checked + .toggle-box-label-left:after{
+    background: @on-bg;
+    border: @off-border;
+}
+.toggle-box input[type=checkbox] + .toggle-box-label-left{
+    color: @togglebutton-label-active-color;
+    font-weight: @togglebutton-label-active-weight;
+}
+.toggle-box input[type=checkbox]:checked + .toggle-box-label-left{
+    color: @togglebutton-label-color;
+    font-weight: @togglebutton-label-weight;
+}
+.toggle-box input[type=checkbox]:checked + .toggle-box-label-left + .toggle-box-label{
+    color: @togglebutton-label-active-color;
+    font-weight: @togglebutton-label-active-weight;
+}
